@@ -14,7 +14,7 @@ do {
 fwrite(STDOUT, 'Enter numeric incremental value: ');
 $countBy = trim(fgets(STDIN));
 
-if (!is_numeric($countBy)){
+if (empty($countBy) || !is_numeric($countBy)){
 	$countBy = 1;
 }
 
