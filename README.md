@@ -1,4 +1,4 @@
-#Develop Branch
+# Develop Branch
 
-##Things to Work On
--Issue with Konami Code
+## Things to Work On
+- Issue with Konami Code
