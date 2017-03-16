@@ -75,28 +75,37 @@ $states = [
     'WY' => 'Wyoming'
   ];
 
+echo "--------------------------------------------------". PHP_EOL;
+echo "These are states with the letter 'x' in it:" . PHP_EOL;
+echo "--------------------------------------------------". PHP_EOL;
 foreach ($states as $state => $stateName) {
 	if (strstr($stateName, 'x')){
 		echo $stateName . PHP_EOL;
 	}
 }
-echo "----------". PHP_EOL;
 
+echo "--------------------------------------------------". PHP_EOL;
+echo "These are states that do not have the letter 'a' within it:" . PHP_EOL;
+echo "--------------------------------------------------". PHP_EOL;
 foreach ($states as $state => $stateName) {
 	if (!strstr($stateName, 'a')){
 		echo $stateName . PHP_EOL;
 	}
 }
-echo "----------". PHP_EOL;
 
+echo "--------------------------------------------------". PHP_EOL;
+echo "These are states starting with vowels:" . PHP_EOL;
+echo "--------------------------------------------------". PHP_EOL;
 foreach ($states as $state => $stateName) {
 	$firstLetter = substr($stateName, 0, 1);
 	if ($firstLetter === 'A' || $firstLetter === 'E' || $firstLetter === 'I' || $firstLetter === 'O' ||$firstLetter === 'U'){
 		echo $state . "\t $stateName" . PHP_EOL;
 	}
 }
-echo "----------". PHP_EOL;
 
+echo "--------------------------------------------------". PHP_EOL;
+echo "These are states starting and ending with vowels:" . PHP_EOL;
+echo "--------------------------------------------------". PHP_EOL;
 $statesStartingAndEndingWithVowels = [];
 foreach ($states as $state => $stateName) {
 	$firstLetter = substr($stateName, 0, 1);
@@ -105,9 +114,23 @@ foreach ($states as $state => $stateName) {
 		$statesStartingAndEndingWithVowels[$state] = $stateName;
 	}
 }
+
 foreach($statesStartingAndEndingWithVowels as $state => $stateName) {
 	echo $state . "\t $stateName" . PHP_EOL;  
 }
 
+echo "--------------------------------------------------". PHP_EOL;
+echo "These are the states with more than one word in their name:" . PHP_EOL;
+echo "--------------------------------------------------". PHP_EOL;
+$statesWithMoreThanOneWordNames =[];
+foreach ($states as $state => $stateName) {
+	if(strstr($stateName, ' ')) {
+		$statesWithMoreThanOneWordNames[$state] = $stateName;
+	}
+}
+
+foreach ($statesWithMoreThanOneWordNames as $state => $stateName) {
+	echo $state . "\t $stateName" . PHP_EOL; 
+}
 
 ?>
