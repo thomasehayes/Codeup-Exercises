@@ -27,5 +27,6 @@ foreach ($books as $book) {
     foreach ($book as $key => $value) {
         echo "$key: $value" . PHP_EOL;
     }
+    
 }
 ?>
