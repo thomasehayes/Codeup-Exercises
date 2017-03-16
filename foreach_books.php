@@ -23,10 +23,11 @@ $books = [
     ]
 ];
 
-foreach ($books as $book) {
-    foreach ($book as $key => $value) {
-        echo "$key: $value" . PHP_EOL;
+foreach ($books as $title =>$book) {
+    echo $title . PHP_EOL;
+    foreach ($book as $info => $value) {
+        echo "$info: $value" . PHP_EOL;
     }
-    
+
 }
 ?>
