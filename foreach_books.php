@@ -23,11 +23,12 @@ $books = [
     ]
 ];
 
-foreach ($books as $title =>$book) {
-    echo $title . PHP_EOL;
-    foreach ($book as $info => $value) {
-        echo "$info: $value" . PHP_EOL;
+foreach ($books as $title => $book) {
+    if ($book['published'] > 1950){
+        echo $title . PHP_EOL;
+        foreach ($book as $info => $value) {
+           echo "$info: $value" . PHP_EOL;
+        }
     }
-
 }
 ?>
