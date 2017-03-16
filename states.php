@@ -65,5 +65,20 @@ foreach ($states as $state => $stateName) {
 		echo $stateName . PHP_EOL;
 	}
 }
+echo "----------". PHP_EOL;
+
+foreach ($states as $state => $stateName) {
+	if (!strstr($stateName, 'a')){
+		echo $stateName . PHP_EOL;
+	}
+}
+echo "----------". PHP_EOL;
+
+foreach ($states as $state => $stateName) {
+	$firstLetter = substr($state, 0, 1);
+	if ($firstLetter=='A' || $firstLetter=='E' || $firstLetter=='I' || $firstLetter=='O' ||$firstLetter=='U'){
+		echo $state . "\t $stateName" . PHP_EOL;
+	}
+}
 
 ?>
