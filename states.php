@@ -133,4 +133,18 @@ foreach ($statesWithMoreThanOneWordNames as $state => $stateName) {
 	echo $state . "\t $stateName" . PHP_EOL; 
 }
 
+
+$arrayOfCardinalStates=[];
+echo "--------------------------------------------------". PHP_EOL;
+echo "These are states with north, south, east, or west in their name:" . PHP_EOL;
+echo "--------------------------------------------------". PHP_EOL;
+foreach($states as $state => $stateName) {
+	if(strstr($stateName, 'North') || strstr($stateName, 'South') || strstr($stateName, 'East') || strstr($stateName, 'West')) {
+		$arrayOfCardinalStates[$state] = $stateName;
+	}
+}
+
+foreach ($arrayOfCardinalStates as $state => $stateName) {
+	echo $state . "\t $stateName" . PHP_EOL; 
+}
 ?>
