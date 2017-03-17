@@ -1,9 +1,6 @@
 <?php 
 //break continue Exercise and Notes
 
-
-$random = mt_rand(1, 100);
-
 for ($i = 1; $i <= 100; $i++) {
 	if($i % 2 !== 0) {
 		continue;;
@@ -11,6 +8,12 @@ for ($i = 1; $i <= 100; $i++) {
 	echo $i, PHP_EOL;
 }
 
+for ($i = 1; $i <= 100; $i++) {
+	if ($i === 11) {
+		break;
+	}
+	echo $i, PHP_EOL;
+}
 
 
 
