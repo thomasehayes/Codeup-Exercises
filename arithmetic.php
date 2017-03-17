@@ -28,11 +28,13 @@ function multiply($a, $b) {
 }
 
 function divide($a, $b) {
-	if (is_numeric($a) && is_numeric($b)){
+	if ($b === 0){
+		echo "Cannot divide by 0!!" . PHP_EOL;
+	} else if (is_numeric($a) && is_numeric($b)) {
     	return $a / $b . PHP_EOL;
 	} else {
 		echo "Both arguments need to be numeric". PHP_EOL;
-	}
+	}	
 }
 
 function modulus($a, $b) {
@@ -46,6 +48,6 @@ function modulus($a, $b) {
 echo add(3, 3);
 echo subtract(3, 3);
 echo multiply(3, 3);
-echo divide(3, 3);
+echo divide(3, 0);
 echo modulus(3, 3);
 // Add code to test your functions here
