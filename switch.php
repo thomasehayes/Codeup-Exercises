@@ -36,7 +36,7 @@
  }
 
 // if else if to show same output
-if (date('N') == 1) {
+if ($dayOfWeek == 1) {
     echo date('l') . PHP_EOL;
 } else if (date('N') == 2) {
     echo date('l') . PHP_EOL;
