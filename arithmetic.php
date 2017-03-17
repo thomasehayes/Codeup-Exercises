@@ -29,7 +29,9 @@ function multiply($a, $b) {
 
 function divide($a, $b) {
 	if ($b === 0){
-		echo "Cannot divide by 0!!" . PHP_EOL;
+		echo "Cannot divide by 0." . PHP_EOL;
+		echo "Value inputed for division: " . $a . PHP_EOL;
+		echo "Value inputed for division: " . $b . PHP_EOL;
 	} else if (is_numeric($a) && is_numeric($b)) {
     	return $a / $b . PHP_EOL;
 	} else {
