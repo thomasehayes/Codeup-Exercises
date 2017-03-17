@@ -1,5 +1,8 @@
 <?php
 
+$a = 10;
+$b = 2;
+
 function add($a, $b)
 {
     return $a + $b . PHP_EOL;
