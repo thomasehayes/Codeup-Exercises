@@ -35,5 +35,21 @@
         echo "You have created a new day!";
  }
 
+// if else if to show same output
+if (date('N') == 1) {
+    echo date('l') . PHP_EOL;
+} else if (date('N') == 2) {
+    echo date('l') . PHP_EOL;
+} else if (date('N') == 3) {
+    echo date('l') . PHP_EOL;
+} else if (date('N') == 4) {
+    echo date('l') . PHP_EOL;
+} else if (date('N') == 5) {
+    echo date('l') . PHP_EOL;
+} else if (date('N') == 6) {
+    echo date('l') . PHP_EOL;
+} else if (date('N') == 7) {
+    echo date('l') . PHP_EOL;
+}
 
 ?>
