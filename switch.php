@@ -38,17 +38,17 @@
 // if else if to show same output
 if ($dayOfWeek == 1) {
     echo date('l') . PHP_EOL;
-} else if (date('N') == 2) {
+} else if ($dayOfWeek == 2) {
     echo date('l') . PHP_EOL;
-} else if (date('N') == 3) {
+} else if ($dayOfWeek == 3) {
     echo date('l') . PHP_EOL;
-} else if (date('N') == 4) {
+} else if ($dayOfWeek == 4) {
     echo date('l') . PHP_EOL;
-} else if (date('N') == 5) {
+} else if ($dayOfWeek == 5) {
     echo date('l') . PHP_EOL;
-} else if (date('N') == 6) {
+} else if ($dayOfWeek == 6) {
     echo date('l') . PHP_EOL;
-} else if (date('N') == 7) {
+} else if ($dayOfWeek == 7) {
     echo date('l') . PHP_EOL;
 }
 
