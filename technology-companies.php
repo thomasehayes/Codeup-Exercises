@@ -45,18 +45,20 @@ $companies = [
     ]
 ];
 
+var_dump($companies);
+
 ksort($companies);
 print_r($companies) . PHP_EOL;
 
 foreach ($companies as $company => $people) {
-    asort($people);
+    sort($people);
     $companies[$company] = $people;
 }
 print_r($companies) . PHP_EOL;
 
+arsort($companies);
+print_r($companies) . PHP_EOL;
 
-// rsort($companies);
-// print_r($companies) . PHP_EOL;
 
 ?>
 
