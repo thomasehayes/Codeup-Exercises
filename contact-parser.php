@@ -6,10 +6,18 @@ function parseContacts($file)
 	// Open 
 	// $file = "contacts.txt";
 	$handle = fopen($file, 'r');
-	$contents = fread($handle, filesize($file));
+	$contents = trim(fread($handle, filesize($file)));
 	fclose($handle);
 
 	$person = explode("\n", $contents);
+
+	//Fer's example
+	// foreach ($person as $key => $contact) {
+	// 	$tempArr = explode("|", $contents);
+	// 	$contacts[$key]["name"] = $tempArr[0];
+	// 	$phone = substr($tempArr[1], 0, 3) . "-" . substr($tempArr[1], 3, 3) . "-" . substr($tempArr[1], 6);
+	// 	$contacts[$key]["number"] = $phone;
+	// }
 
 	foreach ($person as $number) {
 		$info = explode("|", $number);
@@ -20,7 +28,7 @@ function parseContacts($file)
 		];
 		$contacts[] = $eachContact;
 	}
-	
+
     return $contacts;
 }
 
