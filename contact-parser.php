@@ -1,10 +1,10 @@
 <?php
 
-function parseContacts($contents)
+function parseContacts($file)
 {
 	$contacts = array(); 
 	// Open 
-	$file = "contacts.txt";
+	// $file = "contacts.txt";
 	$handle = fopen($file, 'r');
 	$contents = fread($handle, filesize($file));
 	$person = explode("\n", $contents);
