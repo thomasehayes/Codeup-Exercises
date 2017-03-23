@@ -1,24 +1,29 @@
 <?php
-//show all your contacts
-function parseContacts($file)
-{
-	$contacts = array(); 
-	$handle = fopen($file, 'r');
-	$contents = trim(fread($handle, filesize($file)));
-	fclose($handle);
+$filename = 'contacts.txt';
+$handle = fopen($filename, 'r');
+$contents = trim(fread($handle, filesize($filename)));
 
-	$person = explode("\n", $contents);
+function menu($contents, $filename) {
+    
+    do {
+        fwrite(STDOUT, "Select from the following options: " . PHP_EOL);
+        echo "1) Show all contacts" . PHP_EOL;
+        echo "2) Add new contact" . PHP_EOL;
+        echo "3) Search contact by name" . PHP_EOL;
+        echo "4) Delete an existing contact" . PHP_EOL;
+        echo "5) Exit" . PHP_EOL;
+        $choice = fgets(STDIN);
 
-	foreach ($person as $key => $contact) {
-		$tempArr = explode("|", $contents);
-		$contacts[$key]["name"] = $tempArr[0];
-		$phone = substr($tempArr[1], 0, 3) . "-" . substr($tempArr[1], 3, 3) . "-" . substr($tempArr[1], 6);
-		$contacts[$key]["number"] = $phone;
-	}
-
-    return $contacts;
+        if ($choice == 1) {
+            echo $contents . PHP_EOL;
+        } else if ($choice == 2) {
+            echo $contents . PHP_EOL;
+        } else if ($choice == 3) {
+            echo $contents . PHP_EOL;
+        } else if ($choice == 4) {
+            echo $contents . PHP_EOL;
+        }
+    } while ($choice != 5);
 }
 
-var_dump(parseContacts('contacts.txt'));
-
-//add a new contact
+menu($contents, $filename);
