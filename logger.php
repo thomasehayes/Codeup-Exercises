@@ -17,7 +17,11 @@ function logError($message){
 }
 logError("This is an error message.");
 
-
+function clearMessage($logMessage, $message) {
+    $handle = fopen(date("Y-m-d") . ".log", 'w');
+    fwrite($handle, "");
+    fclose($handle);
+}
 
 //====================
 //      NOTES

@@ -12,12 +12,12 @@ function parseContacts($file)
 	$person = explode("\n", $contents);
 
 	//Fer's example
-	// foreach ($person as $key => $contact) {
-	// 	$tempArr = explode("|", $contents);
-	// 	$contacts[$key]["name"] = $tempArr[0];
-	// 	$phone = substr($tempArr[1], 0, 3) . "-" . substr($tempArr[1], 3, 3) . "-" . substr($tempArr[1], 6);
-	// 	$contacts[$key]["number"] = $phone;
-	// }
+	foreach ($person as $key => $contact) {
+		$tempArr = explode("|", $contents);
+		$contacts[$key]["name"] = $tempArr[0];
+		$phone = substr($tempArr[1], 0, 3) . "-" . substr($tempArr[1], 3, 3) . "-" . substr($tempArr[1], 6);
+		$contacts[$key]["number"] = $phone;
+	}
 
 	foreach ($person as $number) {
 		$info = explode("|", $number);
