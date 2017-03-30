@@ -8,34 +8,34 @@ class Person {
 	public $age;
 	public $employed;
 
-	public function returnName($someName)
+	public function returnName()
 	{
 		return $this->name . PHP_EOL;
 	}
 
-	public function getOlder($number)
+	public function getOlder()
 	{
-		$this->number++ . PHP_EOL;
+		$this->age++ . PHP_EOL;
 	}
 
-	public function echoAge($someAge)
+	public function echoAge()
 	{
 		echo $this->age . PHP_EOL;
 	}
 
-	public function quitJob($boolean) 
+	public function quitJob() 
 	{
-		$this->boolean = false . PHP_EOL;
+		$this->employed = false . PHP_EOL;
 	}
 
-	public function getJob($boolean) 
+	public function getJob() 
 	{
-		$this->boolean = true . PHP_EOL;
+		$this->employed = true . PHP_EOL;
 	}
 
-	public function passAway($number) 
+	public function passAway() 
 	{
-		$this->number = 0 . PHP_EOL;
+		$this->age = 0 . PHP_EOL;
 	}
 
 }

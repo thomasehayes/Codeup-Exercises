@@ -7,31 +7,20 @@ $thisGuy = new Person();
 $thisGuy->name = "Bob";
 $thisGuy->age = "43";
 
-echo $thisGuy->returnName($thisGuy->name);
+echo $thisGuy->returnName();
 
-$thisGuy->echoAge($thisGuy->age);
+$thisGuy->echoAge();
+
+$thisGuy->getJob();
+	var_dump($thisGuy->employed);
+
+$thisGuy->getOlder();
+
+$thisGuy->echoAge();
+
+$thisGuy->passAway();
+$thisGuy->echoAge();
 ?>
-
-
-// Procedural code
-
-$name = 'Bob';
-$age = "43";
-
-echo returnName($name);
-
-echoAge($age);
-
-$employed = getJob($employed);
-var_dump($employed);
-
-$age = getOlder($age);
-
-echoAge($age);
-
-$age = passAway($age);
-
-echoAge($age);
 
 
 
