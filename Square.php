@@ -9,7 +9,6 @@ class Square extends Rectangle {
 	}
 
 	public function perimeter() {
-		echo "Perimeter of a square: ";
 		return $this->height * 4;
 	}
 }
