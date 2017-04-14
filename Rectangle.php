@@ -13,7 +13,7 @@ class Rectangle {
 		}
 	}
 	public function area() {
-	
+		echo "Area of a rectangle: ";
 		return ($this->height) * ($this->width);
 	
 	}
