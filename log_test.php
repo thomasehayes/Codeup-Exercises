@@ -4,8 +4,6 @@ date_default_timezone_set("America/Chicago");
 
 $log = new Log();
 $log->logError('$bob is undefined');
-
-$captainsLog = new Log("captainslog");
-$captainsLog->logInfo("On a routine mission to ...");
+$log->logInfo('$bob is defined');
 
 ?>

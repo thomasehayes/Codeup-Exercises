@@ -1,8 +1,8 @@
 <?php 
 
 class Log {
-	public $filename;
-	public $handle;
+	private $filename;
+	private $handle;
 	public $date;
 
 
@@ -10,9 +10,26 @@ class Log {
 	public function __construct($prefix = 'log') 
 	{
 		$this->date = date("Y-m-d");
+		$this->setFilename($prefix);
+		$this->setHandle();
+	}
+
+	protected function setFilename($prefix) {
 		$this->filename = "{$prefix}-{$this->date}.log";
+	}
+
+	protected function setHandle() {
 		$this->handle = fopen($this->filename, "a");
 	}
+
+	public function getFilename() {
+		return $this->filename;
+	}
+
+	public function getHandle() {
+		return $this->handle;
+	}
+
 	public function logMessage($logLevel, $message)
 	{
 		$output = date("Y-m-d H:i:s"). " " . $logLevel . " " . $message .  PHP_EOL;
@@ -23,7 +40,6 @@ class Log {
     	$this->logMessage("INFO", $message) . PHP_EOL;
 	}
 
-
 	public function logError($message){
 	    $this->logMessage("ERROR", $message) . PHP_EOL;
 	}
@@ -33,10 +49,8 @@ class Log {
 		fclose($this->handle);
 	}
 }
- ?>
 
 
-<?php 
 //Ryan's Version
 // class Log {
 
@@ -73,8 +87,5 @@ class Log {
 // 		fclose($this->handle);
 // 	}
 // }
-
-
-
 
  ?>
