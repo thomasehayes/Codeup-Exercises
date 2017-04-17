@@ -7,3 +7,11 @@
 2017-04-17 09:56:05 INFO $bob is defined
 2017-04-17 10:04:30 ERROR $bob is undefined
 2017-04-17 10:04:30 INFO $bob is defined
+2017-04-17 10:48:32 ERROR $bob is undefined
+2017-04-17 10:48:32 INFO $bob is defined
+2017-04-17 10:48:42 ERROR $bob is undefined
+2017-04-17 10:48:42 INFO $bob is defined
+2017-04-17 10:49:12 ERROR $bob is undefined
+2017-04-17 10:49:12 INFO $bob is defined
+2017-04-17 10:49:26 ERROR $bob is undefined
+2017-04-17 10:49:26 INFO $bob is defined

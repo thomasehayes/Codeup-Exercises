@@ -14,30 +14,30 @@ class Log {
 		$this->setHandle();
 	}
 
-	protected function setFilename($prefix) {
+	private function setFilename($prefix) {
 		$this->filename = "{$prefix}-{$this->date}.log";
 	}
 
-	protected function setHandle() {
+	private function setHandle() {
 		$this->handle = fopen($this->filename, "a");
 	}
 
-	protected function setDate() {
+	private function setDate() {
 		$this->date = date("Y-m-d");
 	}
 
-	public function getFilename() {
+	protected function getFilename() {
 		return $this->filename;
 	}
 
-	public function getHandle() {
+	protected function getHandle() {
 		return $this->handle;
 	}
 
-	public function getDate() {
+	protected function getDate() {
 		return $this->date;
 	}
-	
+
 	public function logMessage($logLevel, $message)
 	{
 		$output = date("Y-m-d H:i:s"). " " . $logLevel . " " . $message .  PHP_EOL;
