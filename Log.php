@@ -3,13 +3,13 @@
 class Log {
 	private $filename;
 	private $handle;
-	public $date;
+	private $date;
 
 
 
 	public function __construct($prefix = 'log') 
 	{
-		$this->date = date("Y-m-d");
+		$this->setDate();
 		$this->setFilename($prefix);
 		$this->setHandle();
 	}
@@ -22,6 +22,10 @@ class Log {
 		$this->handle = fopen($this->filename, "a");
 	}
 
+	protected function setDate() {
+		$this->date = date("Y-m-d");
+	}
+
 	public function getFilename() {
 		return $this->filename;
 	}
@@ -30,6 +34,10 @@ class Log {
 		return $this->handle;
 	}
 
+	public function getDate() {
+		return $this->date;
+	}
+	
 	public function logMessage($logLevel, $message)
 	{
 		$output = date("Y-m-d H:i:s"). " " . $logLevel . " " . $message .  PHP_EOL;
