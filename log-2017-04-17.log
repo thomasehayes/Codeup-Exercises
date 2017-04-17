@@ -5,3 +5,5 @@
 2017-04-17 09:51:27 INFO $bob is defined
 2017-04-17 09:56:05 ERROR $bob is undefined
 2017-04-17 09:56:05 INFO $bob is defined
+2017-04-17 10:04:30 ERROR $bob is undefined
+2017-04-17 10:04:30 INFO $bob is defined
