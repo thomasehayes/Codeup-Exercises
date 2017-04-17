@@ -16,6 +16,16 @@ class Log {
 
 	private function setFilename($prefix) {
 		$this->filename = "{$prefix}-{$this->date}.log";
+		
+		if(!touch($this->filename)) {
+			echo 'File is not writable' . PHP_EOL;
+			exit;
+		}
+
+		if(!is_writable($this->filename)) {
+			echo 'File is not writable' . PHP_EOL;
+			exit;
+		}
 	}
 
 	private function setHandle() {

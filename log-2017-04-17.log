@@ -17,3 +17,7 @@
 2017-04-17 10:49:26 INFO $bob is defined
 2017-04-17 10:51:37 ERROR $bob is undefined
 2017-04-17 10:51:37 INFO $bob is defined
+2017-04-17 10:54:39 ERROR $bob is undefined
+2017-04-17 10:54:39 INFO $bob is defined
+2017-04-17 10:56:50 ERROR $bob is undefined
+2017-04-17 10:56:50 INFO $bob is defined
