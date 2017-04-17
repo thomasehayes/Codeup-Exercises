@@ -26,18 +26,6 @@ class Log {
 		$this->date = date("Y-m-d");
 	}
 
-	protected function getFilename() {
-		return $this->filename;
-	}
-
-	protected function getHandle() {
-		return $this->handle;
-	}
-
-	protected function getDate() {
-		return $this->date;
-	}
-
 	public function logMessage($logLevel, $message)
 	{
 		$output = date("Y-m-d H:i:s"). " " . $logLevel . " " . $message .  PHP_EOL;
